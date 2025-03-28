@@ -1,0 +1,301 @@
+/*basic style*/
+@import url(Portfoilo_font.css);
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+html{scroll-behavior: smooth !important;}
+ul, li{list-style: none;}
+a{
+    text-decoration: none;
+    color: #1c1c1c;
+}
+body{
+    font-family: 'SCDream'; 
+    font-size: 96%; 
+    color: #1c1c1c;
+    background: #fffcf8;
+}
+body .row{margin: 0 auto;}
+
+#sub_content01,
+#sub_content02,
+#sub_content03,
+#sub_content04{margin: 0 auto; background: #FFFDF6}
+
+#sub_content01>.row,
+#sub_content02>.row,
+#sub_content03>.row,
+#sub_content04>.row{
+    width: 100%;
+    height: 780px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#sub_content02>.row{height: 953px;}
+#sub_content03>.row{height: 320px;}
+#sub_content04>.row{height: 1850px;}
+    
+
+/* Sub_sia_style */
+#sub_content01>.row{width: 66.66666666666667%;}
+.sub_sia{
+    width: 1280px;
+    height: 455px;
+    margin: 0 auto;
+    display: flex;
+}
+.sub_Title{
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    font-weight: 600;
+    font-style: Italic;
+    color: #839F7C;
+    padding: 50px 0 20px 0;
+}
+.sub_sia_R{
+    width: 600px;
+    height: 455px;
+}
+.sub_sia_R>img{
+    width: 250px;
+    padding: 45px 0 20px 50px;
+}
+.moment_detail,
+.sia_detail{
+    font-family: 'SCDream';
+    font-size: 22px; /*20px*/
+    font-weight: 400;
+    color: #3A3A3A;
+    padding-left: 65px;
+    line-height: 36px;
+}
+
+.subBtnA,
+.subBtnB{
+    float: left;
+    padding-top: 30px;
+}
+
+.subBtnA{padding-left: 65px;}
+.subBtnB{padding-left: 20px;}
+
+.subBtnA a,
+.subBtnB a{
+    width: 200px;
+    height: 60px;
+    border: 1px solid #FFBA40;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+    color: #FFBA40;
+    font-family: 'SCDream';
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+}
+#sub_content01 .subBtnA a:hover,
+#sub_content01 .subBtnB a:hover{
+    background: #FFBA40;
+    color: #fff;
+}
+
+
+/* Sub_sia_style */
+#sub_content02>.row{width: 66.66666666666667%;}
+.sub_SubTitle{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    color: #839F7C;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #CECECE;
+}
+.concept{
+    padding: 40px 0 70px 0;
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
+.concept01{
+    width: 232px;
+    height: 232px;
+    border-radius: 50%;
+    border: 1px solid #CECECE;
+    text-align: center;
+}
+.concept_Number{
+    font-family: 'SCDream';
+    font-size: 18px; /*20px*/
+    font-weight: 500;
+    color: #FFBA40;
+    padding-top: 70px;
+}
+.concept_Text{
+    font-family: 'SCDream';
+    font-size: 35px; /*20px*/
+    font-weight: 800;
+    color: #3A3A3A;
+}
+.COLOR{
+    padding-top: 40px;
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+}
+.FONT{
+    padding-top: 40px;
+    display: flex;
+    gap: 110px;
+    justify-content: center;
+}
+.sub_Color{
+    width: 242px;
+    height: 166px;
+}
+.sub_Color_Title{
+    font-family: 'SCDream';
+    font-size: 25px; /*20px*/
+    font-weight: 500;
+    color: #3A3A3A;
+    padding-bottom: 8px;
+}
+.sub_Color_Box01,
+.sub_Color_Box02,
+.sub_Color_Box03,
+.sub_Color_Box04,
+.sub_Color_Box05{
+    width: 242px;
+    height: 123px;
+    border-radius: 15px;
+    background: #FFBA40;
+    text-align: center;
+}
+.sub_Color_Box02{
+    background: #FFFCF8;
+    border: 1px solid #D1D1D1;
+}
+.sub_Color_Box03{background: #F2F2F2;}
+.sub_Color_Box04{background: #1C1C1C;}
+.sub_Color_Box05{background: #8D8D8D;}
+.color_Code01,
+.color_Code02{
+    font-family: 'SCDream';
+    font-size: 28px; /*20px*/
+    font-weight: 700;
+    color: #fff;
+    line-height: 123px;
+}
+.color_Code02{color: #3A3A3A;}
+.addC{padding-top: 36px;}
+
+.font_G{
+    font-family: 'Gmarket Sans';
+    font-size: 28px; /*20px*/
+    font-weight: 700;
+    color: #555555;
+    display: inline-block;
+}
+.font_R{
+    font-family: 'Cafe24Supermagic-Bold-v1.0';
+    font-size: 33px; /*20px*/
+    color: #555555;
+    display: inline-block;
+}
+
+/* Sub_moment_con3_style */
+#sub_content03>.row{width: 66.66666666666667%;}
+.logo_row{
+    height: 143px;
+    display: flex;
+    justify-content: center;
+    gap: 106px;
+    padding-top: 40px;
+}
+.logo_01{
+    width: 254px;
+    height: 143px;
+    text-align: center;
+}
+.logo_01 img{width: 179px;}
+.logo_detail{
+    font-family: 'SCDream';
+    font-size: 20px; /*20px*/
+    font-weight: 500;
+    color: #3A3A3A;
+    padding-bottom: 70px;
+}
+.add_Symbol{
+    line-height: 143px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #555555;
+}
+
+/* Sub_moment_con4_style */
+#sub_content04>.row{width: 66.66666666666667%;}
+.con4_Overview,
+.con4_Overview02,
+.con4_Overview03{
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    gap: 54px;
+    margin-top: 60px;
+}
+.con4_Overview02{height: 310px;}
+.con4_Overview03{height: 442px;}
+.Overview_Img01,
+.Overview_Img02,
+.Overview_Img03,
+.Overview_Img04{
+    width: 637px;
+    height: 350px;
+    background: url(img/sub_con4_sia_main.png) no-repeat 0 0%;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgb(200, 200, 200);
+}
+.Overview_Img02{background: url(img/sub_con4_sia_main.png) no-repeat 0 36%;}
+.Overview_Img03{
+    background: url(img/sub_con4_sia_main.png) no-repeat 0 85%;
+    height: 310px;
+}
+.Overview_Img04{background: url(img/sub_con4_sia_main.png) no-repeat 0 100%;
+    height: 442px;
+}
+.Overview_Text{
+    font-family: 'SCDream';
+    font-size: 18px; /*20px*/
+    font-weight: 500;
+    color: #3A3A3A;
+    padding: 15px 0 ;
+}
+.Overview_R{
+    width: 546px;
+    height: 500px;
+}
+.Overview_Img_Css01,
+.Overview_Img_Css02,
+.Overview_Img_Css03,
+.Overview_Img_Css04,
+.Overview_Img_Css05{
+    width: 546px;
+    height: 245px;
+    background: url(img/sub_con4_sia_overview_01.jpg) no-repeat 0 0;
+    border-radius: 15px;
+}
+.Overview_Img_Css02{
+    background: url(img/sub_con4_sia_overview_02.jpg) no-repeat 0 0;
+    height: 271px;
+}
+.Overview_Img_Css03{
+    background: url(img/sub_con4_sia_overview_03.jpg) no-repeat 0 0;
+    height: 182px;
+}
+.Overview_Img_Css04{background: url(img/sub_con4_sia_overview_04.jpg) no-repeat 0 0;
+    height: 337px;
+}

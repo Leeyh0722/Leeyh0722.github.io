@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio_main</title>
+    <link rel="stylesheet" href="Portfoilo_master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <style>
+        /* parallax__cont */
+        .parallax__item {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        #horizontal{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 500%;
+        }
+        #horizontal > section {
+            width: 100%;
+        }
+
+
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        //About me 스크롤
+        $(window).on('load', function() {
+            setFlowBannerA();
+        })
+
+        function setFlowBannerA() {
+            const $wrap = $('.flow_bannerA');
+            const $list = $('.flow_bannerA .listA');
+            let wrapWidth = $wrap.width();
+            let listWidth = $list.width();
+            const speed = 50; //1초에 몇픽셀 이동하는지 설정
+
+            //리스트 복제
+            let $clone = $list.clone();
+            $wrap.append($clone);
+            flowBannerActA()
+
+            //배너 실행 함수
+            function flowBannerActA() {
+                //무한 반복을 위해 리스트를 복제 후 배너에 추가
+                if (listWidth < wrapWidth) {
+                    const listCount = Math.ceil(wrapWidth * 2 / listWidth);
+                    for (let i = 2; i < listCount; i++) {
+                        $clone = $clone.clone();
+                        $wrap.append($clone);
+                    }
+                }
+                $wrap.find('.listA').css({
+                    'animation': `${listWidth / speed}s linear infinite flowRollingA`
+                });
+            }
+
+            // 마우스가 요소 위로 진입했을 때 일시정지
+            $wrap.on('mouseenter', function () {
+                $wrap.find('.listA').css('animation-play-state', 'paused');
+            });
+
+            // 마우스가 요소에서 빠져나갈 때 재생
+            $wrap.on('mouseleave', function () {
+                $wrap.find('.listA').css('animation-play-state', 'running');
+            });
+        }     
+        
+        //ECT 상단 스크롤
+        $(window).on('load', function() {
+            setFlowBannerB();
+        })
+
+        function setFlowBannerB() {
+            const $wrap = $('.flow_bannerB');
+            const $list = $('.flow_bannerB .listB');
+            let wrapWidth = $wrap.width();
+            let listWidth = $list.width();
+            const speed = 85; //1초에 몇픽셀 이동하는지 설정
+
+            //리스트 복제
+            let $clone = $list.clone();
+            $wrap.append($clone);
+            flowBannerActB()
+
+            //배너 실행 함수
+            function flowBannerActB() {
+                //무한 반복을 위해 리스트를 복제 후 배너에 추가
+                if (listWidth < wrapWidth) {
+                    const listCount = Math.ceil(wrapWidth * 2 / listWidth);
+                    for (let i = 2; i < listCount; i++) {
+                        $clone = $clone.clone();
+                        $wrap.append($clone);
+                    }
+                }
+                $wrap.find('.listB').css({
+                    'animation': `${listWidth / speed}s linear infinite flowRollingB`
+                });
+            }
+
+            // 마우스가 요소 위로 진입했을 때 일시정지
+            $wrap.on('mouseenter', function () {
+                $wrap.find('.listB').css('animation-play-state', 'paused');
+            });
+
+            // 마우스가 요소에서 빠져나갈 때 재생
+            $wrap.on('mouseleave', function () {
+                $wrap.find('.listB').css('animation-play-state', 'running');
+            });
+        }
+
+        //ECT 상단 스크롤
+        $(window).on('load', function() {
+        setFlowBannerC();
+        })
+
+        function setFlowBannerC() {
+            const $wrap = $('.flow_bannerC');
+            const $list = $('.flow_bannerC .listC');
+            let wrapWidth = $wrap.width();
+            let listWidth = $list.width();
+            const speed = 85; //1초에 몇픽셀 이동하는지 설정
+
+            //리스트 복제
+            let $clone = $list.clone();
+            $wrap.append($clone);
+            flowBannerActC()
+
+            //배너 실행 함수
+            function flowBannerActC() {
+                //무한 반복을 위해 리스트를 복제 후 배너에 추가
+                if (listWidth < wrapWidth) {
+                    const listCount = Math.ceil(wrapWidth * 2 / listWidth);
+                    for (let i = 2; i < listCount; i++) {
+                        $clone = $clone.clone();
+                        $wrap.append($clone);
+                    }
+                }
+                $wrap.find('.listC').css({
+                    'animation': `${listWidth / speed}s linear infinite flowRollingC`
+                });
+            }
+
+            // 마우스가 요소 위로 진입했을 때 일시정지
+            $wrap.on('mouseenter', function () {
+                $wrap.find('.listC').css('animation-play-state', 'paused');
+            });
+
+            // 마우스가 요소에서 빠져나갈 때 재생
+            $wrap.on('mouseleave', function () {
+                $wrap.find('.listC').css('animation-play-state', 'running');
+            });
+        }
+    </script>
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="row">
+            <nav id="lnb">
+                <ul class="navi">
+                    <li><a href="#content02">ABOUT ME</a></li>
+                    <li><a href="#content03">WEB DESIGN</a></li>
+                    <li><a href="#content05">ECT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <section id="content01" class="content__item">
+        <div class="row">
+            <h1>PORTFOLIO</h1>
+            <div id="Text01">
+                <div class="inner txt_area">
+                    <p class="txt word01">안녕하세요!</p>
+                    <p class="txt word02">웹 디자이너에 지원하는 신입 이영현입니다.</p>
+                </div>
+            </div>
+
+            <div id="Text02">
+                <div class="inner txt_area">
+                    <p class="txt word03">개인이 아닌, 모두와 소통하고 배우며</p>
+                    <p class="txt word04">성장하는 디자이너가 되겠습니다.</p>
+                </div>
+            </div>
+            <p class="con1Text">DESIGN 2025.VER</p>
+        </div>
+    </section>
+    <!-- content01 end -->
+
+    <section id="content02" class="content__item">
+        <div class="row">
+            <div class="profile">
+                <img src="" alt="">
+            </div>
+
+            <div id="con2TextRow">
+                <h2 class="About t1">About</h2>
+                <h2 class="me t2">me</h2>
+            </div>
+            
+            <div class="L_textBox">
+                <h3>이영현</h3>
+                <p class="name">lee yeong hyeon</p>
+                <div class="L_textBox02">
+                    <div class="L_textBox03">
+                        <div class="L_subText">
+                            <p class="L_subTitle">Birth</p>
+                            <p class="L_subBody">2001. 07. 22</p>
+                        </div>
+
+                        <div class="L_subText">
+                            <p class="L_subTitle">Phone</p>
+                            <p class="L_subBody">010 - 9313 - 5910</p>
+                        </div>
+
+                        <div class="L_subText">
+                            <p class="L_subTitle">Email</p>
+                            <p class="L_subBody">leeyh0309mm@naver.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="C_TextRow">
+                <div class="C_textBox">
+                    <p class="con2Title">Education</p>
+                    <div class="C_subText">
+                        <h5>2025. 03</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">이젠컴퓨터아카데미 수료</p>
+                            <p class="C_subDetail">웹표준기반 스마트 웹콘텐츠</p>
+                        </div>
+                    </div>
+
+                    <div class="C_subText">
+                        <h5>2023. 02</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">안산대학교 졸업</p>
+                            <p class="C_subDetail">시각미디어디자인과</p>
+                        </div>
+                    </div>
+
+                    <div class="C_subText">
+                        <h5>2020. 02</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">서울영상고등학교 졸업</p>
+                            <p class="C_subDetail">영상미디어과</p>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="C_textBox03">
+                    <p class="con2Title addA">career</p>
+                    <div class="C_subText">
+                        <h5>2022 ~ 2023</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">(주)이앤비콘텐츠 제작팀 사원</p>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="C_textBox04">
+                    <p class="con2Title addA">certificate</p>
+                    <div class="C_subText">
+                        <h5>2019</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">컴퓨터그래픽스운용기능사</p>
+                        </div>
+                    </div>
+                    <div class="C_subText">
+                        <h5>2018</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle addB">GTQ 인디자인 1급</p>
+                            <p class="C_subTitle addB">GTQ 포토샵 1급</p>
+                            <p class="C_subTitle addB">S-MAT 3급</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="R_TextRow">
+                <div class="R_textBox">
+                    <p class="con2Title">experience</p>
+                    <div class="C_subText">
+                        <h5>2022</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">Blue Awards 상품문화디자인 국제공모전</p>
+                            <p class="C_subDetail">디지털컨텐츠디자인 &lt;록시땅 웹디자인&gt; 동상</p>
+                            <p class="C_subDetail">S.P 디자인 &lt;한율 핸드크림&gt; 입선</p>
+                        </div>
+                    </div>
+
+                    <div class="C_subText">
+                        <h5 class="remove">2022</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">시각미디어디자인과 졸업전시 위원회</p>
+                            <p class="C_subDetail">웹, UI/UX 분야 대표</p>
+                            <p class="C_subDetail">졸업전시 도록 디자인 참여</p>
+                        </div>
+                    </div>
+                    
+                    <div class="C_subText">
+                        <h5 class="remove">2022</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">3학년 1학기 우수 2등급</p>
+                        </div>
+                    </div>
+
+                    <div class="C_subText">
+                        <h5>2021</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">Blue Awards 상품문화디자인 국제공모전</p>
+                            <p class="C_subDetail">시각 디자인 3D &lt;여행 파트너&gt; 특선</p>
+                        </div>
+                    </div>
+
+                    <div class="C_subText">
+                        <h5 class="remove">2021</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">2학년 1, 2학기 과수석</p>
+                        </div>
+                    </div> 
+
+                    <div class="C_subText">
+                        <h5>2020</h5>
+                        <div class="C_textBox02">
+                            <p class="C_subTitle">1학년 1, 2학기 과수석</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="R_textBox02">
+                    <p class="con2Title addA">Skill</p>
+                    <div class="con2ImgRow01">
+                        <div class="con2ImgRow02 flow_bannerA">
+                            <ul class="listA">
+                                <li class="img00"><img src="img/Adobe_Photoshop_icon.png" alt="포토샵"></li>
+                                <li class="img00"><img src="img/Adobe_Illustrator_icon.png" alt="일러스트레이터"></li>
+                                <li class="img00"><img src="img/Adobe_InDesign_icon.png" alt="인디자인"></li>
+                                <li class="img00"><img src="img/Adobe_After_Effects_icon.png" alt="에프터이펙트"></li>
+                                <li class="img00"><img src="img/figma_icon.png" alt="피그마"></li>
+                                <li class="img00"><img src="img/visual_studio_code_icon.png" alt="비쥬얼스튜디오"></li>
+                                <li class="img01"><img src="img/html_icon.png" alt="html"></li>
+                                <li class="img02"><img src="img/html_css3_icon.png" alt="css"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </section>
+    <!-- content02 end -->
+
+    <section id="content03" class="content__item">
+        <div class="row">
+            <h2 class="web">WEB</h2>
+            <div class="con3Imgrow">
+                <div class="con3Box1 parallax__item__img i1">
+                    <div class="con3Img1 parallax__item__img i1"><a href="#"></a></div>
+                </div>
+                
+                <div class="con3Box2 parallax__item__img i2">
+                    <div class="con3Img2 parallax__item__img i2"><a href="#"></a></div>
+                </div>
+
+                <div class="con3Box3 parallax__item__img i3">
+                    <div class="con3Img3 parallax__item__img i3"><a href="#"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content03 end -->
+
+    <main id="horizontal">
+        <section id="content04" class="parallax__item" style="background:#FFF3DE">
+            <div class="row">
+                <article>
+                    <div class="content__item__num">
+                        <div class="con4TextRowA">
+                            <p class="number">01</p>
+                            <p class="con4SubTitle">웹 디자인<br>
+                                <span class="con4Title">SIA</span>
+                            </p>
+                            <div class="con4TextRowB">
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">작업 기간</p>
+                                    <p class="con4SubTextB">2025. 02</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여 인원</p>
+                                    <p class="con4SubTextB">개인 작업</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여도</p>
+                                    <p class="con4SubTextB">100%</p>
+                                </div>
+                                <div class="con4BtnA">
+                                    <a href="Portfoilo_sia.html">상세 소개</a>
+                                </div>
+                                <div class="con4BtnB">
+                                    <a href="http://moment.dothome.co.kr/sia/Sia_main.html">바로 가기</a>
+                                </div>
+                            </div>
+                            <div class="con4TextRowC">
+                                <p class="Overview">Overview</p>
+                                <p class="work">
+                                    SIA는 Stay In Art의 줄인말로 전시 정보와<br>
+                                    예매를 한번에 진행 할 수 있는 통합 플랫폼입니다. 
+                                    <br><br>
+                                    첫 시작으로 의무문으로 하여 호기심을 가질 수 <br>
+                                    있도록 디자인했으며, 빅타이포와 이미지를 <br>
+                                    활용하여 다양한 전시 정보를 쉽게 얻을 수 <br>
+                                    있게 디자인했습니다.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="con4Img">
+                            <div class="mockupImg01"></div>
+                            <div class="backImg01"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="content04_2" class="parallax__item" style="background:#EEF8F7">
+            <span class="parallax__item__num"></span>
+                <figure class="parallax__item__imgWrap">
+                    <div class="row parallax__item__img">
+                        <div class="con4TextRowA02">
+                            <p class="number">02</p>
+                            <p class="con4SubTitle">웹 디자인<br>
+                                <span class="con4Title">MOMENT</span>
+                            </p>
+                            <div class="con4TextRowB">
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">작업 기간</p>
+                                    <p class="con4SubTextB">2024. 12 - 2025. 01</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여 인원</p>
+                                    <p class="con4SubTextB">개인 작업</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여도</p>
+                                    <p class="con4SubTextB">100%</p>
+                                </div>
+                                <div class="con4BtnA">
+                                    <a href="Portfoilo_moment.html">상세 소개</a>
+                                </div>
+                                <div class="con4BtnB">
+                                    <a href="http://moment.dothome.co.kr/moment/moment_main.html">바로 가기</a>
+                                </div>
+                            </div>
+                            <div class="con4TextRowC">
+                                <p class="Overview">Overview</p>
+                                <p class="work">
+                                    MOMENT는 연극/뮤지컬 통합 플랫폼으로 일정관리 및 
+                                    예매를 한번에 할 수 있는 사이트입니다. 
+                                    <br> <br> 
+                                    다양한 카드 레이아웃과 중간 중간에 광고 이미지를 추가하여 
+                                    레이아웃이 반복되지 않게 하였으며, 상세 페이지에는 
+                                    영상을 추가하여 극에 흥미를 가질 있도록 디자인했습니다. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="con4Img01">
+                            <div class="mockupImg02"></div>
+                            <div class="backImg02"></div>
+                        </div>
+                    </div>
+                </figure>
+        </section>
+        <section id="content04_3" class="parallax__item" style="background:#EEE2D6">
+            <span class="parallax__item__num"></span>
+                <figure class="parallax__item__imgWrap">
+                    <div class="row parallax__item__img">
+                        <div class="con4TextRowA02">
+                            <p class="number">03</p>
+                            <p class="con4SubTitle">웹 리디자인<br>
+                                <span class="con4Title">GIVENCHY</span>
+                            </p>
+                            <div class="con4TextRowB">
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">작업 기간</p>
+                                    <p class="con4SubTextB">2022. 05 - 2022. 12</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여 인원</p>
+                                    <p class="con4SubTextB">개인 작업</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여도</p>
+                                    <p class="con4SubTextB">100%</p>
+                                </div>
+                                <div class="con4BtnA">
+                                    <a href="#">상세 소개</a>
+                                </div>
+                                <div class="con4BtnB">
+                                    <a href="#">바로 가기</a>
+                                </div>
+                            </div>
+                            <div class="con4TextRowC">
+                                <p class="Overview">Overview</p>
+                                <p class="work">
+                                    지방시 특유의 심플하고 모던한 분위기를 살리고</br>
+                                    과감한 느낌을 주고자 모듈 그리드와 빅 이미지를</br> 
+                                    활용하여 제품을 강조했습니다. 그리고 영상이나</br>
+                                    광고 컷들을 적극적으로 사용하여 전체적으로</br>
+                                    루즈해 보이지않도록 디자인해 보았습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="con4Img01">
+                            <div class="mockupImg03"></div>
+                            <div class="backImg03"></div>
+                        </div>
+                    </div>
+                </figure>
+        </section>
+        <section id="content04_4" class="parallax__item" style="background:#F5E6EC">
+            <span class="parallax__item__num"></span>
+                <figure class="parallax__item__imgWrap">
+                    <div class="row parallax__item__img">
+                        <div class="con4TextRowA02">
+                            <p class="number">04</p>
+                            <p class="con4SubTitle">웹 리디자인<br>
+                                <span class="con4Title">FORMENT</span>
+                            </p>
+                            <div class="con4TextRowB">
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">작업 기간</p>
+                                    <p class="con4SubTextB">2022. 03 - 2022. 04</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여 인원</p>
+                                    <p class="con4SubTextB">개인 작업</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여도</p>
+                                    <p class="con4SubTextB">100%</p>
+                                </div>
+                                <div class="con4BtnA">
+                                    <a href="#">상세 소개</a>
+                                </div>
+                            </div>
+                            <div class="con4TextRowC">
+                                <p class="Overview">Overview</p>
+                                <p class="work">
+                                    심플한 모양과 다양한 에디션이 출시되는</br> 
+                                    코튼 계열의 제품을 홍보하기 위해 주재료인</br> 
+                                    꽃과 은은하고 부드러운 색감을 활용하여</br> 
+                                    제품을 살리고자 했습니다.</br>
+                                    
+                                    코튼 계열 외에 제품을 마지막에 홍보하여</br> 
+                                    보는 사람으로 하여 다양한 제품을 보고</br> 
+                                    구매할 수 있도록 구성했습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="con4Img01">
+                            <div class="mockupImg04"></div>
+                            <div class="backImg04"></div>
+                        </div>
+                    </div>
+                </figure>
+        </section>
+        <section id="content04_5" class="parallax__item" style="background:#C9EEE1">
+            <span class="parallax__item__num"></span>
+                <figure class="parallax__item__imgWrap">
+                    <div class="row parallax__item__img">
+                        <div class="con4TextRowA02">
+                            <p class="number">05</p>
+                            <p class="con4SubTitle">웹 리디자인<br>
+                                <span class="con4Title">L’OCCITANE</span>
+                            </p>
+                            <div class="con4TextRowB">
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">작업 기간</p>
+                                    <p class="con4SubTextB">2021. 09 - 2021. 12</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여 인원</p>
+                                    <p class="con4SubTextB">개인 작업</p>
+                                </div>
+                                <div class="con4SubTextRowA">
+                                    <p class="con4SubTextA">참여도</p>
+                                    <p class="con4SubTextB">100%</p>
+                                </div>
+                                <div class="con4BtnA">
+                                    <a href="#">상세 소개</a>
+                                </div>
+
+                            </div>
+                            <div class="con4TextRowC">
+                                <p class="Overview">Overview</p>
+                                <p class="work">
+                                    브랜드 컬러인 노란색뿐만 아니라 초록색,</br>  
+                                    하늘색 등 자연을 표현할 수 있는 색을 선정하여</br>  
+                                    내츄얼한 분위기를 연출했습니다.</br> 
+                                    
+                                    단마다 레이아웃의 변화를 주어 단조롭지 않게</br>  
+                                    구성했으며, 제품 일러스트 확장, 원재료 이미지</br>  
+                                    또는 식물 그림다 등을 통해 제품의 특성을</br> 
+                                    다양한 방법으로 표현하여 브랜드 아이덴티티를</br>  
+                                    표현하고자 했습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="con4Img01">
+                            <div class="mockupImg05"></div>
+                            <div class="backImg05"></div>
+                        </div>
+                    </div>
+                </figure>
+        </section>
+    </main>
+    <!-- content04 end -->
+
+    <section id="content05" class="content__item">
+        <div class="row">
+            <h2 class="ect">ECT</h2>
+            <div class="con5ImgrowA">
+                <div class="flow_bannerB">
+                    <ul class="listB">
+                        <li class="box cate_p">
+                            <div class="con5Img1" onclick="openModal1()">
+                                <div class="info">
+                                    <p class="infoTitle">시스템 리디자인</p>
+                                    <p class="infoDetail">편집 디자인_재개발 제안서</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <div class="con5Img2" onclick="openModal2()"></div>
+                            <div class="info">
+                                <p class="infoTitle">달러구트 꿈 백화점</p>
+                                <p class="infoDetail">편집 디자인_북디자인</p>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <div class="con5Img3" onclick="openModal3()"></div>
+                            <div class="info">
+                                <p class="infoTitle">모스키노</p>
+                                <p class="infoDetail">편집 디자인_브로슈어</p>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <div class="con5Img4" onclick="openModal4()"></div>
+                            <div class="info">
+                                <p class="infoTitle">NC 백화점</p>
+                                <p class="infoDetail">편집 디자인_홍보용 책자</p>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <div class="con5Img5" onclick="openModal5()"></div>
+                            <div class="info">
+                                <p class="infoTitle">패키지_리디자인</p>
+                                <p class="infoDetail">한율 핸드크림</p>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <div class="con5Img6" onclick="openModal6()"></div>
+                            <div class="info">
+                                <p class="infoTitle">패키지_디자인</p>
+                                <p class="infoDetail">단봄 양갱</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="con5ImgrowB">
+                <div class="flow_bannerC">
+                    <ul class="listC">
+                        <li class="box cate_p">
+                            <div class="con5Img7" onclick="openModal7()"></div>
+                            <div class="info">
+                                <p class="infoTitle">편집 디자인</p>
+                                <p class="infoDetail">포스코 명절 모바일</p>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <div class="con5Img8" onclick="openModal8()"></div>
+                            <div class="info">
+                                <p class="infoTitle">편집 디자인</p>
+                                <p class="infoDetail">진료 모바일</p>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <div class="con5Img9" onclick="openModal9()"></div>
+                            <div class="info">
+                                <p class="infoTitle">편집 디자인</p>
+                                <p class="infoDetail">다래한방병원 이벤트</p>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <div class="con5Img10" onclick="openModal10()"></div>
+                            <div class="info">
+                                <p class="infoTitle">편집 디자인</p>
+                                <p class="infoDetail">빛봄의원 이벤트</p>
+                            </div>
+                        </li>
+                        <li class="box cate_p">
+                            <a href="https://youtu.be/nmNuBkktTa4?si=Zt0KAJg8vTb3aGki">
+                                <div class="con5Img11">
+                                    <div class="info">
+                                        <p class="infoTitle">영상 디자인_인포그래픽</p>
+                                        <p class="infoDetail">감정노동자</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="box cate_p">
+                            <a href="https://youtu.be/naEUle2f6n0?si=cQp0lMCT3e96LbVh">
+                                <div class="con5Img12">
+                                    <div class="info">
+                                        <p class="infoTitle">영상 디자인</p>
+                                        <p class="infoDetail">휴식 시간</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal1" id="myModal1">
+                <div class="modal_body1">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_1_1.jpg" alt="시스템_리디자인_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_1_2.jpg" alt="시스템_리디자인_02" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_1_3.jpg" alt="시스템_리디자인_03" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_1_4.jpg" alt="시스템_리디자인_04" />
+                        <button class="btn-close-modal" onclick="closeModal1()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal2" id="myModal2">
+                <div class="modal_body2">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_1.jpg" alt="북디자인_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_2.jpg" alt="북디자인_02" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_3.jpg" alt="북디자인_03" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_4.jpg" alt="북디자인_04" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_5.jpg" alt="북디자인_05" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_6.jpg" alt="북디자인_06" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_7.jpg" alt="북디자인_07" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_8.jpg" alt="북디자인_08" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_9.jpg" alt="북디자인_09" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_10.jpg" alt="북디자인_10" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_11.jpg" alt="북디자인_11" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_12.jpg" alt="북디자인_12" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_13.jpg" alt="북디자인_13" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_14.jpg" alt="북디자인_14" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_15.jpg" alt="북디자인_15" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_16.jpg" alt="북디자인_16" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_17.jpg" alt="북디자인_17" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_2_18.jpg" alt="북디자인_18" />
+                        <button class="btn-close-modal" onclick="closeModal2()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal3" id="myModal3">
+                <div class="modal_body2">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_3_1.jpg" alt="모스키노_브로슈어_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_3_2.jpg" alt="모스키노_브로슈어_02" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_3_3.jpg" alt="모스키노_브로슈어_03" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_3_4.jpg" alt="모스키노_브로슈어_04" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_3_5.jpg" alt="모스키노_브로슈어_05" />
+                        <button class="btn-close-modal" onclick="closeModal3()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal4" id="myModal4">
+                <div class="modal_body2">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_4_1.jpg" alt="NC백화점_DM_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_4_2.jpg" alt="NC백화점_DM_02" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_4_3.jpg" alt="NC백화점_DM_03" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_4_4.jpg" alt="NC백화점_DM_04" />
+                        <button class="btn-close-modal" onclick="closeModal4()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal5" id="myModal5">
+                <div class="modal_body2">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_5_1.jpg" alt="패키지디자인_한율_01" />
+                        <button class="btn-close-modal" onclick="closeModal5()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal6" id="myModal6">
+                <div class="modal_body2">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_6_1.jpg" alt="패키지디자인_단봄_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_6_2.jpg" alt="패키지디자인_단봄_02" />
+                        <button class="btn-close-modal" onclick="closeModal6()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal7" id="myModal7">
+                <div class="modal_body3">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_7_1.jpg" alt="명절_모바일_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_7_2.jpg" alt="명절_모바일_02" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_7_3.jpg" alt="명절_모바일_03" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_7_4.jpg" alt="명절_모바일_04" />
+                        <button class="btn-close-modal" onclick="closeModal7()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal8" id="myModal8">
+                <div class="modal_body4">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_8_1.jpg" alt="진료_모바일_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_8_2.jpg" alt="진료_모바일_02" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_8_3.jpg" alt="진료_모바일_03" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_8_4.jpg" alt="진료_모바일_04" />
+                        <button class="btn-close-modal" onclick="closeModal8()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal9" id="myModal9">
+                <div class="modal_body4">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_9_1.jpg" alt="다래한방병원_이벤트_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_9_2.jpg" alt="다래한방병원_이벤트_02" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_9_3.jpg" alt="다래한방병원_이벤트_03" />
+                        <button class="btn-close-modal" onclick="closeModal9()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="modal10" id="myModal10">
+                <div class="modal_body4">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="img/con5_10_1.jpg" alt="봄빛의원_이벤트_01" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_10_2.jpg" alt="봄빛의원_이벤트_02" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_10_3.jpg" alt="봄빛의원_이벤트_03" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/con5_10_4.jpg" alt="봄빛의원_이벤트_04" />
+                        <button class="btn-close-modal" onclick="closeModal10()">닫기</button>
+                      </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination" ></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" style="color : #839F7C"></div>
+                    <div class="swiper-button-next" style="color : #839F7C"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content05 end -->
+
+
+    <!-- content05 end -->
+    <script>
+        //modal1
+        function openModal1(){
+        document.getElementById('myModal1').style.display='block';
+        }
+        function closeModal1(){
+        document.getElementById('myModal1').style.display='none';
+        }
+        //modal2
+        function openModal2(){
+        document.getElementById('myModal2').style.display='block';
+        }
+        function closeModal2(){
+        document.getElementById('myModal2').style.display='none';
+        }
+        //modal3
+        function openModal3(){
+        document.getElementById('myModal3').style.display='block';
+        }
+        function closeModal3(){
+        document.getElementById('myModal3').style.display='none';
+        }
+        //modal4
+        function openModal4(){
+        document.getElementById('myModal4').style.display='block';
+        }
+        function closeModal4(){
+        document.getElementById('myModal4').style.display='none';
+        }
+        //modal5
+        function openModal5(){
+        document.getElementById('myModal5').style.display='block';
+        }
+        function closeModal5(){
+        document.getElementById('myModal5').style.display='none';
+        }
+        //modal6
+        function openModal6(){
+        document.getElementById('myModal6').style.display='block';
+        }
+        function closeModal6(){
+        document.getElementById('myModal6').style.display='none';
+        }
+        //modal7
+        function openModal7(){
+        document.getElementById('myModal7').style.display='block';
+        }
+        function closeModal7(){
+        document.getElementById('myModal7').style.display='none';
+        }
+        //modal8
+        function openModal8(){
+        document.getElementById('myModal8').style.display='block';
+        }
+        function closeModal8(){
+        document.getElementById('myModal8').style.display='none';
+        }
+        //modal9
+        function openModal9(){
+        document.getElementById('myModal9').style.display='block';
+        }
+        function closeModal9(){
+        document.getElementById('myModal9').style.display='none';
+        }
+        //modal10
+        function openModal10(){
+        document.getElementById('myModal10').style.display='block';
+        }
+        function closeModal10(){
+        document.getElementById('myModal10').style.display='none';
+        }
+
+
+        const swiper1 = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+    
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+
+
+    </script>
+
+    <!-- 스와이프 js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- 패럴렉스 js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
+    <!-- 패럴렉스 script -->
+    <script>
+        //Main 상단 텍스트
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#sample',
+                start: '30% center', 
+                end: '101% bottom',  // 트리거 종료 지점 확장
+                scrub: 1,            // 스크롤과 더 부드럽게 동기화
+            }
+            });
+
+            timeline
+            .fromTo('.word01', 
+                { width: '0%', opacity: 0 }, 
+                { width: 'auto', opacity: 1, duration: 1.5, ease: 'power2.out' }  // 애니메이션 지속시간 증가
+            )
+            .fromTo('.word02', 
+                { width: '0%', opacity: 0 }, 
+                { width: 'auto', opacity: 1, duration: 1.2, ease: 'power2.out' }, 
+            );
+
+            timeline
+            .fromTo('.word03', 
+                { width: '0%', opacity: 0 }, 
+                { width: 'auto', opacity: 1, duration: 1.4, ease: 'power2.out' }  // 애니메이션 지속시간 증가
+            )
+            .fromTo('.word04', 
+                { width: '0%', opacity: 0 }, 
+                { width: 'auto', opacity: 1, duration: 1.6, ease: 'power2.out' }, 
+            );
+    </script>
+
+    <!-- 패럴렉스 js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        // Con2 : 텍스트 좌우 애니메이션
+        const ani1 = gsap.timeline();
+        ani1.from("#content02 .t1", {x: innerWidth * -1})
+                .from("#content02 .t2", {x: innerWidth * 1})
+
+
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: "#content02",
+            start: "top top",
+            end: "+=1400",
+            scrub: true,
+            pin: true,
+            markers: false,
+            anticipatePin: 1
+        });
+
+        // Con2 : 이미지 순차적으로 나오기, 텍스트 제자리 애니메이션
+        const ani2 = gsap.timeline();
+        ani2.from("#content03 .i1", {y: -100, autoAlpha:0,})
+            .from("#content03 .i2", {y: 100, autoAlpha:0,})
+            .from("#content03 .i3", {y: -100, autoAlpha:0,});
+            
+        ScrollTrigger.create({
+            animation: ani2,
+            trigger: "#content03",
+            start: "top top",
+            end: "+=1800",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: false
+        });
+
+        //가로스크롤
+        const horizontal = document.querySelector("#horizontal"); 
+        const sections = gsap.utils.toArray("#horizontal > section");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length -1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: horizontal,
+                start: "top top",
+                end: () => "+=" + (horizontal.offsetWidth - innerWidth),
+                pin: true,
+                scrub: 1,
+                snap: {
+                    snapTo: 1/(sections.length -1),
+                    inertia: false,
+                    duration: {min: 0.1, max: 0.1},
+                },
+                invalidateOnRefresh: true,
+                anticipatePin: 1
+            }
+        });
+    </script>
+</body>
+
+
+</html>
